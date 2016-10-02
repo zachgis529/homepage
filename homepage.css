@@ -1,0 +1,192 @@
+#about {
+  color: #fff;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#about-content {
+  text-align: left;
+}
+
+#background {
+  background-color: #000;
+}
+
+#buttonrow {
+  margin-bottom: 250px;
+  padding: 25px;
+}
+
+#contact {
+  height: auto;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  background-color: #464646;
+  padding: 1px;
+}
+
+#contact-content {
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+#contact-links > a {
+  color: #ffffff;
+  padding: 25px;
+}
+
+#contact-links > a:hover{
+  color: gray;
+}
+
+#desc {
+  margin: 100px;
+}
+
+#desc > p {
+  font-size: 18px;
+}
+
+footer {
+  color: #ffffff;
+}
+
+footer > div > div > div > ul > li > a {
+  color: #ffffff;
+}
+
+footer > div > div > div > a {
+  color: #fff;
+  float: right;
+}
+
+#home {
+  height: auto;
+  background: linear-gradient( rgba(131, 139, 139, 0.7), rgba(131, 139, 139, 0.7)), url("http://i628.photobucket.com/albums/uu6/zachgis529/7e5ef794-b950-43ae-94bd-9288d79e0506_zpsxhhinfxr.jpg~original");
+  background-size: cover;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#home-content {
+  text-align: center;
+  padding: 100px;
+}
+
+#home-links {}
+
+#home-links > a {
+  color: #fff;
+  padding: 50px;
+}
+
+#home-links > a:hover {
+  color: #7F7E7E;
+}
+
+#home-name {
+  font-size: 36px;
+  margin-top: 150px;
+  color: #fff;
+  font-family: 'Poiret One', serif;
+}
+
+#home-name > div {
+  padding-bottom: 25px;
+  font-size: 20px;
+}
+
+#home-name > div > h2 {
+  padding: 25px;
+}
+
+#lists {
+  padding: 15px;
+}
+
+#navbuttons {
+  float: right;
+}
+
+#navbuttons > div > button{
+  background-color: black;
+  border:none;
+}
+
+#navbuttons > div > button:hover{
+  background-color: gray;
+}
+
+#navbuttons > div > button > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#navcontent {
+  font-family: 'Raleway', sans-serif;
+  background-color: black;
+  padding-left:12px;
+  padding-right:12px;
+}
+
+#photo {
+  height: 300px;
+  width: 300px;
+  border-radius: 400px;
+  text-align: center;
+  margin: 100px;
+  display: inline-block;
+}
+
+#photo > img {
+  height: 200px;
+  width: 200px;
+  border-radius: 400px;
+}
+
+#portfolio {
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  background-color: #7F7E7E;
+}
+
+#portfolio-content {
+  text-align: center;
+  padding: 25px;
+}
+
+.portfolio-ex:hover {
+  transform: scale(1.1);
+}
+
+.portfolio-ex {
+  color: #000;
+  display: inline-block;
+  background-color: #ffffff;
+  margin: 10px;
+  height: 240px;
+  width: 320px;
+  border-radius: 10px;
+}
+
+#portfolio-grid {
+  margin: 25px;
+}
+
+#portfolio-text {
+  margin: 25px;
+  color: #000000;
+}
+
+#portfolio-text > p {
+  font-size: 18px;
+}
+
+#zach {
+  float: left;
+  color: #fff;
+  margin: 5px;
+}
