@@ -1,21 +1,23 @@
 $(document).ready(function() {
 
 $.getJSON('http://ipinfo.io', function(data){
-  console.log(data)
   var city = data.city;
   var region = data.region;
   var country = data.country;
   var zipcode = data.postal;
-  console.log(city);
-})
 
-var getWeather = function (city, state){
-	var url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22"+city+"%2C%20"+region+"%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
+  var getWeather = function(){
+	var url = "HTTP://api.openweathermap.org/data/2.5/weather?zip="+zipcode+",us&APPID=2b16187d82ecabb9d5259af118f91199";
 	$.getJSON(url, function(weather_data){
-	  var temp = weather_data.query.results.channel.item.condition.temp+"&#176";
-	  $("#temp").html(temp);
+	  var tempF = Math.floor((((weather_data.main.temp)*9)/5)-459.67);
+	  console.log(tempF);
+	  $("#temp").append("<p>"+tempF+"</p>");
       })
 	}
+
+  getWeather();
+})
+
 
 //get weather info
 //insert state outline and weather icons
