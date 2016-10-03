@@ -1,43 +1,22 @@
 $(document).ready(function() {
 
-if (!navigator.geolocation){
-  output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
-  //set output location
-  return;
-} else if (navigator.geolocation){
-  navigator.geolocation.getCurrentPosition(function(position) {
-    set_vars(position.coords.latitude, position.coords.longitude);
-  });
-}
+$.getJSON('http://ipinfo.io', function(data){
+  console.log(data)
+  var city = data.city;
+  var region = data.region;
+  var country = data.country;
+  var zipcode = data.postal;
+  console.log(city);
+})
 
+var getWeather = function (city, state){
+	var url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22"+city+"%2C%20"+region+"%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
+	$.getJSON(url, function(weather_data){
+	  var temp = weather_data.query.results.channel.item.condition.temp+"&#176";
+	  $("#temp").html(temp);
+      })
+	}
 
-
-var location = function (lat, long){
-	var lat = lat;
-	var long = long;
-}
-
-var getWeather = function (lat, long){
-	$.ajax({
-	  url: 'api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long,
-	  type: 'GET',
-	  dataType: 'json', 
-
-      success: function(data) {
-      	console.log(data);
-        var unit = data.query.results.channel.units.temperature;
-        $(".country").html(data.query.results.channel.location.country);
-        $(".city").html(data.query.results.channel.location.city);
-        $(".weather").html(data.query.results.channel.item.condition.text);
-        $(".temperature-text").html(data.query.results.channel.item.condition.temp + " °" + unit);
-        weather = data.query.results.channel.item.condition.text;
-      },
-
-      error: function(err) {
-        console.log(err);
-        $(/*text output item*/).html('data for location does not exist');
-      },
-	})
-}
-
+//get weather info
+//insert state outline and weather icons
 });
