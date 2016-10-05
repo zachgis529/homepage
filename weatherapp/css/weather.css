@@ -60,6 +60,9 @@
     right: 0px;
     position:relative;
 }
+.four > div > p{
+	font-size: 30px;
+}
 .text-container{
 	position:absolute;
 	right:50%;
