@@ -23,30 +23,40 @@
 #circle-big{
     width: 300px;
     height: 300px;
-    margin: 100px;
+    margin: 155px;
     border-radius: 50%;
     box-shadow: 0px 0px 5px #7ec0ee;
+    position: absolute;
+    overflow: hidden;
+}
+iframe{
+    height: 400px;
+    width: 400px;
 }
 .one{
-	top: 110px;
-    left: -110px;
+	top: 255px;
+    left: 0px;
     position:relative;
 }
 .one > div > p > i{
 	font-size:40px;
 }
+#outer-square{
+    width: 610px;
+    height: 610px;
+}
 .one > div > p{
 	font-size: 40px;
 }
 .two {
-    top: -110px;
-    right: 0px;
+    top: 0px;
+    right: -155px;
     position:relative;
     font-size: 40px;
 }
 .three {
-    bottom: 0px;
-    right: -310px;
+    bottom: -255px;
+    right: -300px;
     position:relative;
 }
 .three > div > p{
@@ -56,8 +66,8 @@
     font-size: 40px;
 }
 .four {
-    bottom: -210px;
-    right: 0px;
+    bottom: -505px;
+    right: 50px;
     position:relative;
 }
 .four > div > p{
